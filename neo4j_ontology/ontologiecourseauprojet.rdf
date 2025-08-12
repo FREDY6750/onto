@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26/"
+     xml:base="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-26="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#aPourAffluent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#aPourAffluent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#estAffluentDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Affluent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#aPourBassinVersant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#aPourBassinVersant">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#contient"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#contient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#contient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#CoursEau"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#estAffluentDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#estAffluentDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Affluent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#CoursEau"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#estTraverseePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#estTraverseePar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#traverse"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#LocaliteGeographique"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#CoursEau"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#traverse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#traverse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#LocaliteGeographique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#debitAffluent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#debitAffluent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#debitMoyenCoursEau -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#debitMoyenCoursEau"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#longueurCoursEau -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#longueurCoursEau"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomAffluent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomAffluent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomBassinVersant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomBassinVersant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomCoursEau -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomCoursEau"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomLocGeo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomLocGeo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomSource -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomSource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomVersement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nomVersement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#partSurfaceNationaleBassinVersant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#partSurfaceNationaleBassinVersant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regimehydrologique -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regimehydrologique"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#superficieBassinVersant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#superficieBassinVersant"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Affluent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Affluent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersantNational -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersantNational">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#CoursEau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#CoursEau"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Fleuve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Fleuve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#CoursEau"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#LocaliteGeographique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#LocaliteGeographique"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#bassinversantmouhoun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#bassinversantmouhoun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersant"/>
+        <untitled-ontology-26:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lemouhoun"/>
+        <untitled-ontology-26:nomBassinVersant>bassinversantmouhoun</untitled-ontology-26:nomBassinVersant>
+        <untitled-ontology-26:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">33.22</untitled-ontology-26:partSurfaceNationaleBassinVersant>
+        <untitled-ontology-26:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">91036.0</untitled-ontology-26:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lebougouriba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lebougouriba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Affluent"/>
+        <untitled-ontology-26:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.63</untitled-ontology-26:debitAffluent>
+        <untitled-ontology-26:nomAffluent>lebougouriba</untitled-ontology-26:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#legrandbale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#legrandbale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Affluent"/>
+        <untitled-ontology-26:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</untitled-ontology-26:debitAffluent>
+        <untitled-ontology-26:nomAffluent>legrandbale</untitled-ontology-26:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lekou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lekou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Affluent"/>
+        <untitled-ontology-26:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2</untitled-ontology-26:debitAffluent>
+        <untitled-ontology-26:nomAffluent>lekou</untitled-ontology-26:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lemouhoun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lemouhoun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Fleuve"/>
+        <untitled-ontology-26:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lebougouriba"/>
+        <untitled-ontology-26:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#legrandbale"/>
+        <untitled-ontology-26:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lekou"/>
+        <untitled-ontology-26:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#leplandi"/>
+        <untitled-ontology-26:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lesourou"/>
+        <untitled-ontology-26:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#levounhou"/>
+        <untitled-ontology-26:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#bassinversantmouhoun"/>
+        <untitled-ontology-26:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regionbouclemouhoun"/>
+        <untitled-ontology-26:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regionhautsbassin"/>
+        <untitled-ontology-26:debitMoyenCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">263.0</untitled-ontology-26:debitMoyenCoursEau>
+        <untitled-ontology-26:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</untitled-ontology-26:longueurCoursEau>
+        <untitled-ontology-26:nomCoursEau>lemouhoun</untitled-ontology-26:nomCoursEau>
+        <untitled-ontology-26:nomSource>falaisesbanfora</untitled-ontology-26:nomSource>
+        <untitled-ontology-26:nomVersement>lacvolta</untitled-ontology-26:nomVersement>
+        <untitled-ontology-26:regimehydrologique>perenne</untitled-ontology-26:regimehydrologique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#leplandi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#leplandi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Affluent"/>
+        <untitled-ontology-26:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</untitled-ontology-26:debitAffluent>
+        <untitled-ontology-26:nomAffluent>leplandi</untitled-ontology-26:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lesourou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#lesourou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Affluent"/>
+        <untitled-ontology-26:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</untitled-ontology-26:debitAffluent>
+        <untitled-ontology-26:nomAffluent>lesourou</untitled-ontology-26:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#levounhou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#levounhou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#Affluent"/>
+        <untitled-ontology-26:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</untitled-ontology-26:debitAffluent>
+        <untitled-ontology-26:nomAffluent>levounhou</untitled-ontology-26:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#mouhouninferieur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#mouhouninferieur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersantNational"/>
+        <untitled-ontology-26:nomBassinVersant>mouhouninferieur</untitled-ontology-26:nomBassinVersant>
+        <untitled-ontology-26:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</untitled-ontology-26:partSurfaceNationaleBassinVersant>
+        <untitled-ontology-26:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">54802.0</untitled-ontology-26:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#mouhounsuperieur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#mouhounsuperieur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersantNational"/>
+        <untitled-ontology-26:nomBassinVersant>mouhounsuperieur</untitled-ontology-26:nomBassinVersant>
+        <untitled-ontology-26:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.66</untitled-ontology-26:partSurfaceNationaleBassinVersant>
+        <untitled-ontology-26:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20978.0</untitled-ontology-26:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regionbouclemouhoun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regionbouclemouhoun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#LocaliteGeographique"/>
+        <untitled-ontology-26:nomLocGeo>regionbouclemouhoun</untitled-ontology-26:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regioncascades -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regioncascades">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#LocaliteGeographique"/>
+        <untitled-ontology-26:nomLocGeo>regioncascades</untitled-ontology-26:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regioncentrenord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regioncentrenord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#LocaliteGeographique"/>
+        <untitled-ontology-26:nomLocGeo>regioncentrenord</untitled-ontology-26:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regionhautsbassin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regionhautsbassin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#LocaliteGeographique"/>
+        <untitled-ontology-26:nomLocGeo>regionhautsbassin</untitled-ontology-26:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regionnord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regionnord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#LocaliteGeographique"/>
+        <untitled-ontology-26:nomLocGeo>regionnord</untitled-ontology-26:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regionsudouest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regionsudouest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#LocaliteGeographique"/>
+        <untitled-ontology-26:nomLocGeo>regionsudouest</untitled-ontology-26:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#sourou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#sourou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#BassinVersantNational"/>
+        <untitled-ontology-26:nomBassinVersant>sourou</untitled-ontology-26:nomBassinVersant>
+        <untitled-ontology-26:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.55</untitled-ontology-26:partSurfaceNationaleBassinVersant>
+        <untitled-ontology-26:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15225.0</untitled-ontology-26:superficieBassinVersant>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#nazinon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#CoursEau"/>
+        <untitled-ontology-26:nomCoursEau>nazinon</untitled-ontology-26:nomCoursEau>
+        <untitled-ontology-26:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">250.5</untitled-ontology-26:longueurCoursEau>
+        <untitled-ontology-26:debitMoyenCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">160.3</untitled-ontology-26:debitMoyenCoursEau>
+        <untitled-ontology-26:regimehydrologique>intermittent</untitled-ontology-26:regimehydrologique>
+        <untitled-ontology-26:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#leplandi"/>
+        <untitled-ontology-26:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#mouhouninferieur"/>
+        <untitled-ontology-26:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/6/untitled-ontology-26#regioncentrenord"/>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

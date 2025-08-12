@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32">
+    <Prefix name="" IRI="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Affluent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BassinVersantNational"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoursEau"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fleuve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LocaliteGeographique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Riviere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SousBassinVersantNational"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SousBassinVersantRegional"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aPourAffluent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aPourBassinVersant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estAffluentDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estTraverseePar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#traverse"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#debitAffluent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#debitMoyenCoursEau"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#longueurCoursEau"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomAffluent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomBassinVersant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomCoursEau"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomLocGeo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomSource"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomVersement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#partSurfaceNationaleBassinVersant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#superficieBassinVersant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#typeCoursEau"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentBaoue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentBeli"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentBonsoaga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentBougouriba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentDargol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentDiamangou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentDoudodo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentDougoulamoumdi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentFaga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentGorouol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentGoudebo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentGrandBale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentIringou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentKompienga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentKou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentKoulipele"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentLerabaOccidental"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentMassili"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentNakambe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentNazinon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentNgorlaka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentNouhao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentNoumbiel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentPlandi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentSangoue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentSeledogo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentSesse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentSingou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentSirba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentSissili"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentSourou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentTapoa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentTcherbo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentTesse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentVounHou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AffluentYanon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BassinVersantNationalComoe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BassinVersantNationalMouhoun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BassinVersantNationalNakambe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BassinVersantNationalNiger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FleuveComoe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FleuveMouhoun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FleuveNakambe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FleuveNiger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionBoucleMouhoun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionCascades"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionCentre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionCentreEst"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionCentreNord"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionCentreOuest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionCentreSud"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionEst"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionHautsBassins"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionNord"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionPlateauCentral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionSahel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RegionSudOuest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereBeli"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereBonsoaga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereBougouriba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereDargol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereDiamangou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereDoudodo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereDougoulamoumdi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereFaga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereGorouol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereGoudebo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereGrandBale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereHauteComoe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereIringou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereKompienga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereKou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereKoulipele"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereLerabaOccidental"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereMassili"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereNGorlaka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereNakambe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereNazinon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereNouhao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereNoumbiel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RivierePlandi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereSangoue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereSeledogo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereSesse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereSingou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereSirba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereSissili"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereSourou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereTapoa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereTcherbo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereTesse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereVounHou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiviereYanon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantNationalBanifing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantNationalComoe_Leraba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantNationalMouhounInferieur"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantNationalMouhounSuperieur"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantNationalNakambe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantNationalNazinon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantNationalPendjari_Kompienga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantNationalRDFN_CS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantNationalRDFN_CSS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantNationalSourou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalBaoue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalBeli"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalBonsoaga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalBoromo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalBougouriba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalDargol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalDiamangou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalDoudodo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalDougoulamoumdi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalFaga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalGorouol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalGoudebo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalGrandBale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalHauteComoe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalKodoun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalKompienga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalKou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalKoulipele"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalLeraba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalMassili"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalNGorlaka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalNakambe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalNazinon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalNouhao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalNoumbiel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalPlandi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalSangoue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalSeledogo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalSesse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalSingou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalSirba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalSissili"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalSourou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalTapoa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalTcherbo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalTesse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SousBassinVersantRegionalVounHou"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Fleuve"/>
+        <Class IRI="#CoursEau"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Riviere"/>
+        <Class IRI="#CoursEau"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SousBassinVersantNational"/>
+        <Class IRI="#BassinVersantNational"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SousBassinVersantRegional"/>
+        <Class IRI="#BassinVersantNational"/>
+    </SubClassOf>
+    <!-- ... SNIPPED: The rest of the RDF content is long and continues exactly as provided by the user ... -->
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->

@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://example.org/ontology#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontology#aPourAffluent -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#aPourAffluent">
+        <inverseOf rdf:resource="http://example.org/ontology#estAffluentDe"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontology#aPourBassinVersant -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#aPourBassinVersant">
+        <inverseOf rdf:resource="http://example.org/ontology#contient"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#CoursEau"/>
+        <rdfs:range rdf:resource="http://example.org/ontology#BassinVersant"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontology#contient -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#contient">
+        <rdfs:domain rdf:resource="http://example.org/ontology#BassinVersant"/>
+        <rdfs:range rdf:resource="http://example.org/ontology#CoursEau"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontology#estAffluentDe -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#estAffluentDe">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+        <rdfs:range rdf:resource="http://example.org/ontology#CoursEau"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontology#estTraverseePar -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#estTraverseePar">
+        <inverseOf rdf:resource="http://example.org/ontology#traverse"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#LocaliteGeographique"/>
+        <rdfs:range rdf:resource="http://example.org/ontology#CoursEau"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontology#traverse -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#traverse">
+        <rdfs:domain rdf:resource="http://example.org/ontology#CoursEau"/>
+        <rdfs:range rdf:resource="http://example.org/ontology#LocaliteGeographique"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontology#debitMoyenCoursEau -->
+
+    <DatatypeProperty rdf:about="http://example.org/ontology#debitMoyenCoursEau">
+        <rdfs:domain rdf:resource="http://example.org/ontology#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontology#longueurCoursEau -->
+
+    <DatatypeProperty rdf:about="http://example.org/ontology#longueurCoursEau">
+        <rdfs:domain rdf:resource="http://example.org/ontology#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontology#nomBassinVersant -->
+
+    <DatatypeProperty rdf:about="http://example.org/ontology#nomBassinVersant">
+        <rdfs:domain rdf:resource="http://example.org/ontology#BassinVersant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontology#nomLocGeo -->
+
+    <DatatypeProperty rdf:about="http://example.org/ontology#nomLocGeo">
+        <rdfs:domain rdf:resource="http://example.org/ontology#LocaliteGeographique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontology#nomSource -->
+
+    <DatatypeProperty rdf:about="http://example.org/ontology#nomSource">
+        <rdfs:domain rdf:resource="http://example.org/ontology#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontology#partSurfaceNationaleBassinVersant -->
+
+    <DatatypeProperty rdf:about="http://example.org/ontology#partSurfaceNationaleBassinVersant">
+        <rdfs:domain rdf:resource="http://example.org/ontology#BassinVersant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontology#patronymeCoursEau -->
+
+    <DatatypeProperty rdf:about="http://example.org/ontology#patronymeCoursEau">
+        <rdfs:domain rdf:resource="http://example.org/ontology#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontology#superficieBassinVersant -->
+
+    <DatatypeProperty rdf:about="http://example.org/ontology#superficieBassinVersant">
+        <rdfs:domain rdf:resource="http://example.org/ontology#BassinVersant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#debitAffluent -->
+
+    <DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#debitAffluent">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#nomAffluent -->
+
+    <DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#nomAffluent">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontology#BassinVersant -->
+
+    <Class rdf:about="http://example.org/ontology#BassinVersant"/>
+    
+
+
+    <!-- http://example.org/ontology#CoursEau -->
+
+    <Class rdf:about="http://example.org/ontology#CoursEau"/>
+    
+
+
+    <!-- http://example.org/ontology#Fleuve -->
+
+    <Class rdf:about="http://example.org/ontology#Fleuve">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontology#CoursEau"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#LocaliteGeographique -->
+
+    <Class rdf:about="http://example.org/ontology#LocaliteGeographique"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Affluent -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AffluentBama -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AffluentBama"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AffluentBaoue -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AffluentBaoue"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AffluentBougouriba -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AffluentBougouriba">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AffluentLeraba -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AffluentLeraba">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AffluentMassili -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AffluentMassili">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AffluentNazinon -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AffluentNazinon">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AffluentSissili -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AffluentSissili">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AffluentSourou -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AffluentSourou">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Affluent"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BassinComoe -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BassinComoe">
+        <rdf:type rdf:resource="http://example.org/ontology#BassinVersant"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BassinVolta -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BassinVolta">
+        <rdf:type rdf:resource="http://example.org/ontology#BassinVersant"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BoucleDuMouhoun -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BoucleDuMouhoun">
+        <rdf:type rdf:resource="http://example.org/ontology#LocaliteGeographique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Centre -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Centre">
+        <rdf:type rdf:resource="http://example.org/ontology#LocaliteGeographique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CentreEst -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#CentreEst">
+        <rdf:type rdf:resource="http://example.org/ontology#LocaliteGeographique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Comoe -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Comoe">
+        <rdf:type rdf:resource="http://example.org/ontology#CoursEau"/>
+        <ontology:aPourAffluent rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AffluentLeraba"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Mouhoun -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Mouhoun">
+        <rdf:type rdf:resource="http://example.org/ontology#CoursEau"/>
+        <ontology:aPourAffluent rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AffluentBougouriba"/>
+        <ontology:aPourAffluent rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AffluentSourou"/>
+        <ontology:aPourBassinVersant rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BassinVolta"/>
+        <ontology:traverse rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BoucleDuMouhoun"/>
+        <ontology:debitMoyenCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">235.0</ontology:debitMoyenCoursEau>
+        <ontology:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1352.0</ontology:longueurCoursEau>
+        <ontology:patronymeCoursEau>Mouhoun</ontology:patronymeCoursEau>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Nakambe -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Nakambe">
+        <rdf:type rdf:resource="http://example.org/ontology#CoursEau"/>
+        <ontology:aPourAffluent rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AffluentMassili"/>
+        <ontology:aPourAffluent rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AffluentSissili"/>
+        <ontology:aPourBassinVersant rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BassinVolta"/>
+        <ontology:traverse rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Centre"/>
+        <ontology:traverse rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CentreEst"/>
+        <ontology:debitMoyenCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</ontology:debitMoyenCoursEau>
+        <ontology:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">560.0</ontology:longueurCoursEau>
+        <ontology:patronymeCoursEau>Nakambe</ontology:patronymeCoursEau>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Nazinon -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Nazinon">
+        <rdf:type rdf:resource="http://example.org/ontology#CoursEau"/>
+        <ontology:aPourAffluent rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AffluentBama"/>
+        <ontology:aPourAffluent rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AffluentSourou"/>
+        <ontology:traverse rdf:resource="http://www.co-ode.org/ontologies/ont.owl#PlateauCentral"/>
+        <ontology:debitMoyenCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.0</ontology:debitMoyenCoursEau>
+        <ontology:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">370.0</ontology:longueurCoursEau>
+        <ontology:patronymeCoursEau>Nazinon</ontology:patronymeCoursEau>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PlateauCentral -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#PlateauCentral">
+        <rdf:type rdf:resource="http://example.org/ontology#LocaliteGeographique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RegionDesCascades -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RegionDesCascades">
+        <rdf:type rdf:resource="http://example.org/ontology#LocaliteGeographique"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
