@@ -1,52 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="max-w-2xl mx-auto py-10 px-6">
+<div class="max-w-3xl mx-auto py-10 px-6">
     <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-        <i data-lucide="building-2" class="w-6 h-6 text-pink-600"></i> Ajouter une ville
+        <i data-lucide="plus-square" class="w-6 h-6 text-blue-600"></i>
+        Nouvelle localité
     </h2>
 
-    <form method="POST" action="{{ route('localites.store') }}" class="bg-white p-6 rounded-xl shadow space-y-5">
+    @if ($errors->any())
+        <div class="mb-4 p-3 rounded-lg bg-red-50 text-red-700 border border-red-200">
+            <ul class="list-disc list-inside">
+                @foreach ($errors->all() as $err)
+                    <li>{{ $err }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <form action="{{ route('localites.store') }}" method="POST" class="bg-white shadow-md rounded-xl p-6 space-y-4">
         @csrf
 
-        <!-- Nom de la ville -->
         <div>
-            <label for="nomVille" class="block text-sm font-medium text-gray-700 mb-1">Nom de la ville</label>
-            <input type="text" name="nomVille" id="nomVille" required
-                   class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring focus:ring-pink-200 focus:outline-none">
+            <label class="block text-sm text-gray-700 mb-1">Nom de la localité</label>
+            <input type="text" name="nomLocGeo" value="{{ old('nomLocGeo') }}" required
+                   class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            @error('nomLocGeo') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
         </div>
 
-        <!-- Région -->
-        <div>
-            <label for="nomLocGeo" class="block text-sm font-medium text-gray-700 mb-1">Région</label>
-            <select name="nomLocGeo" id="nomLocGeo" required
-                    class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white text-gray-700 focus:ring focus:ring-pink-200 focus:outline-none">
-                <option value="">-- Choisir une région --</option>
-                @foreach($regions as $record)
-                    @php
-                        $regionNode = $record->get('r');
-                        $nom = $regionNode?->getProperty('nomLocGeo') ?? '';
-                    @endphp
-                    @if($nom)
-                        <option value="{{ $nom }}">{{ ucfirst(str_replace('region', 'Région ', $nom)) }}</option>
-                    @endif
-                @endforeach
-            </select>
-        </div>
-
-        <!-- Bouton -->
-        <div class="text-right">
-            <button type="submit"
-                    class="inline-flex items-center gap-2 px-5 py-2 bg-pink-600 text-white text-sm font-medium rounded-md hover:bg-pink-700 transition">
-                <i data-lucide="plus" class="w-4 h-4"></i> Ajouter
+        <div class="flex items-center gap-2">
+            <button class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                <i data-lucide="save" class="w-4 h-4 mr-2"></i> Enregistrer
             </button>
+            <a href="{{ route('localites.index') }}" class="px-4 py-2 border rounded-lg hover:bg-gray-50">Annuler</a>
         </div>
     </form>
 </div>
 
 @push('scripts')
-<script>
-    lucide.createIcons();
-</script>
+<script> lucide.createIcons(); </script>
 @endpush
 @endsection

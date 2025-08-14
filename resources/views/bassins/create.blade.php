@@ -1,52 +1,61 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="max-w-2xl mx-auto py-10 px-6">
+<div class="max-w-3xl mx-auto py-10 px-6">
     <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-        <i data-lucide="mountain" class="w-6 h-6 text-purple-600"></i>
-        Ajouter un Bassin Versant
+        <i data-lucide="mountain" class="w-6 h-6 text-blue-600"></i>
+        Ajouter un bassin versant
     </h2>
+
+    @if ($errors->any())
+        <div class="mb-4 rounded-md bg-red-50 border border-red-200 p-4 text-red-700">
+            <ul class="list-disc pl-5 space-y-1">
+                @foreach ($errors->all() as $error)
+                    <li class="text-sm">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <form method="POST" action="{{ route('bassins.store') }}" class="bg-white p-6 rounded-xl shadow space-y-5">
         @csrf
 
         <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Nom du Bassin</label>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Nom du bassin</label>
             <input type="text" name="nomBassinVersant" required
-                   class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                   value="{{ old('nomBassinVersant') }}">
+                   value="{{ old('nomBassinVersant') }}"
+                   class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
         </div>
 
         <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">Superficie (km²)</label>
-            <input type="number" step="0.1" name="superficieBassinVersant" required
-                   class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                   value="{{ old('superficieBassinVersant') }}">
+            <input type="number" step="0.1" name="superficieBassinVersant"
+                   value="{{ old('superficieBassinVersant') }}"
+                   class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
         </div>
 
         <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Part dans la surface nationale (%)</label>
-            <input type="number" step="0.1" name="partSurfaceNationaleBassinVersant" required
-                   class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                   value="{{ old('partSurfaceNationaleBassinVersant') }}">
+            <label class="block text-sm font-medium text-gray-700 mb-1">Part sur le territoire (%)</label>
+            <input type="number" step="0.01" name="partSurfaceNationaleBassinVersant"
+                   value="{{ old('partSurfaceNationaleBassinVersant') }}"
+                   class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
         </div>
 
-        <div class="flex justify-between items-center pt-4">
-            <button type="submit"
-                    class="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-md hover:bg-purple-700 transition">
-                <i data-lucide="save" class="w-4 h-4"></i> Enregistrer
-            </button>
+        <div class="flex justify-end items-center gap-2 pt-4">
             <a href="{{ route('bassins.index') }}"
-               class="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 text-gray-800 text-sm font-medium rounded-md hover:bg-gray-300 transition">
-                <i data-lucide="x" class="w-4 h-4"></i> Annuler
+               class="px-4 py-2 border rounded-lg hover:bg-gray-50">
+                Annuler
             </a>
+            <button type="submit"
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                <i data-lucide="save" class="w-4 h-4"></i>
+                Enregistrer
+            </button>
         </div>
     </form>
 </div>
 
 @push('scripts')
-<script>
-    lucide.createIcons();
-</script>
+<script> lucide.createIcons(); </script>
 @endpush
 @endsection

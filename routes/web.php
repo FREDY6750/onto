@@ -7,6 +7,14 @@ use App\Http\Controllers\AffluentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TestNeo4jController;
 use App\Http\Controllers\RdfImportController;
+use App\Http\Controllers\RiviereController;
+use App\Http\Controllers\FleuveController;
+use App\Http\Controllers\SousBassinNationalController;
+use App\Http\Controllers\SousBassinRegionalController;
+
+
+
+
 
 Route::get('/', function () {
     return redirect()->route('cours.index'); // ou view('welcome') si tu veux afficher une page d'accueil
@@ -19,6 +27,12 @@ Route::resource('bassins', BassinVersantController::class);
 Route::resource('localites', LocaliteController::class);
 Route::resource('affluents', AffluentController::class);
 Route::resource('fleuve', FleuveController::class);
+Route::resource('rivieres', RiviereController::class);
+Route::resource('sbvnationaux', SousBassinNationalController::class);
+Route::resource('sbvregionaux', SousBassinRegionalController::class);
+
+
+
 //Route::get('/cours-eau', [CoursEauController::class, 'index'])->name('cours_eau.index');
 
 Route::get('/import-rdf', [RdfImportController::class, 'importRdf']);

@@ -2,134 +2,106 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\Neo4jService;
 use Illuminate\Http\Request;
+use App\Services\CoursEauService;
 
 class CoursEauController extends Controller
 {
-    protected $neo4j;
+    public function __construct(private CoursEauService $service) {}
 
-    public function __construct(Neo4jService $neo4j)
-    {
-        $this->neo4j = $neo4j;
-    }
-
+    /**
+     * Liste des cours d’eau
+     */
     public function index()
     {
-        $results = $this->neo4j->getAllCoursEau();
+        $rows = $this->service->all();
+        // On convertit les records Neo4j en tableaux associatifs pour la vue
+        $cours = array_map(
+            fn($row) => $row->get('c')->getProperties(),
+            $rows
+        );
 
-        $coursEaux = [];
-
-        foreach ($results as $record) {
-            $cours = $record->get('c');
-            $bassin = $record->get('b');
-            $localites = $record->get('l');
-
-            $coursNode = $cours instanceof \Laudis\Neo4j\Types\Node ? $cours->getProperties() : [];
-            $bassinNom = ($bassin instanceof \Laudis\Neo4j\Types\Node) ? $bassin->getProperties()['nomBassinVersant'] ?? 'N/A' : 'N/A';
-
-
-            $localiteList = [];
-            if (is_iterable($localites)) {
-                foreach ($localites as $l) {
-                    if ($l instanceof \Laudis\Neo4j\Types\Node) {
-                        $localiteList[] = $l->getProperties()['nomLocGeo'] ?? '';
-                    }
-                }
-            }
-
-            $coursEaux[] = [
-                'nomCoursEau' => $coursNode['nomCoursEau'] ?? 'N/A',
-                'longueurCoursEau' => $coursNode['longueurCoursEau'] ?? 'N/A',
-                'debitMoyenCoursEau' => $coursNode['debitMoyenCoursEau'] ?? 'N/A',
-                'regimehydrologique' => $coursNode['regimehydrologique'] ?? 'N/A',
-                'nomSource' => $coursNode['nomSource'] ?? 'N/A',
-                'nomVersement' => $coursNode['nomVersement'] ?? 'N/A',
-                'bassin' => $bassinNom,
-                'localites' => $localiteList,
-            ];
-        }
-
-        return view('cours.index', compact('coursEaux'));
+        return view('cours.index', compact('cours'));
     }
 
+    /**
+     * Formulaire de création
+     */
     public function create()
     {
-        $localites = $this->neo4j->getAllLocalites();
-        $bassins = $this->neo4j->getAllBassins();
-
-        return view('cours.create', compact('localites', 'bassins'));
+        return view('cours.create');
     }
 
+    /**
+     * Enregistrement
+     */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'nomCoursEau' => 'required',
-            'longueurCoursEau' => 'required|numeric',
-            'debitMoyenCoursEau' => 'required|numeric',
-            'regimehydrologique' => 'required',
-            'nomSource' => 'required|string',
-            'nomVersement' => 'required|string',
-            'localite_id' => 'required',
-            'bassin_id' => 'required',
+        $data = $request->validate([
+            'nomCoursEau'         => ['required','string','max:255'],
+            'typeCoursEau'        => ['nullable','string','max:255'],
+            'longueurCoursEau'    => ['nullable','numeric'],
+            'debitMoyenCoursEau'  => ['nullable','numeric'],
+            'nomSource'           => ['nullable','string'],
+            'nomVersement'        => ['nullable','string'],
         ]);
 
-        $this->neo4j->createCoursEau($validated);
+        $this->service->create($data);
 
-        return redirect()->route('cours.index')->with('success', 'Cours d\'eau ajouté !');
+        return redirect()
+            ->route('cours.index')
+            ->with('status', 'Cours d’eau créé avec succès.');
     }
 
-    public function show($name)
+    /**
+     * Formulaire d’édition
+     *
+     * @param string $nomCoursEau  (paramètre de route)
+     */
+    public function edit(string $nomCoursEau)
     {
-        $record = $this->neo4j->findCoursEauByName($name);
+        $record = $this->service->find($nomCoursEau);
+        abort_if(!$record, 404, 'Cours d’eau introuvable');
 
         $cours = $record->get('c')->getProperties();
-        $cours['bassin'] = optional($record->get('b'))->getProperties() ?? [];
-        $cours['localites'] = [];
-
-        $localites = $record->get('l');
-        if (is_iterable($localites)) {
-            foreach ($localites as $l) {
-                if ($l instanceof \Laudis\Neo4j\Types\Node) {
-                    $cours['localites'][] = $l->getProperties()['nomLocGeo'] ?? '';
-                }
-            }
-        }
-
-        return view('cours.show', compact('cours'));
+        return view('cours.edit', compact('cours'));
     }
 
-    public function edit($name)
+    /**
+     * Mise à jour
+     *
+     * @param string $nomCoursEau  (paramètre de route)
+     */
+    public function update(Request $request, string $nomCoursEau)
     {
-        $record = $this->neo4j->findCoursEauByName($name);
-        $cours = $record->get('c')->getProperties();
-        $localites = $this->neo4j->getAllLocalites();
-        $bassins = $this->neo4j->getAllBassins();
-
-        return view('cours.edit', compact('cours', 'localites', 'bassins'));
-    }
-
-    public function update(Request $request, $name)
-    {
-        $validated = $request->validate([
-            'nomCoursEau' => 'required',
-            'longueurCoursEau' => 'required|numeric',
-            'debitMoyenCoursEau' => 'required|numeric',
-            'regimehydrologique' => 'required',
-            'nomSource' => 'required|string',
-            'nomVersement' => 'required|string',
-            'localite_id' => 'required',
-            'bassin_id' => 'required',
+        $data = $request->validate([
+            'nomCoursEau'         => ['nullable','string','max:255'], // laisser vide pour garder l’ancien nom
+            'typeCoursEau'        => ['nullable','string','max:255'],
+            'longueurCoursEau'    => ['nullable','numeric'],
+            'debitMoyenCoursEau'  => ['nullable','numeric'],
+            'nomSource'           => ['nullable','string'],
+            'nomVersement'        => ['nullable','string'],
         ]);
 
-        $this->neo4j->updateCoursEau($name, $validated);
+        $this->service->update($nomCoursEau, $data);
 
-        return redirect()->route('cours.index')->with('success', 'Cours d\'eau mis à jour !');
+        // Si le nom a été changé, on redirige vers l’index (pas de show)
+        return redirect()
+            ->route('cours.index')
+            ->with('status', 'Cours d’eau mis à jour avec succès.');
     }
 
-    public function destroy($name)
+    /**
+     * Suppression
+     *
+     * @param string $nomCoursEau  (paramètre de route)
+     */
+    public function destroy(string $nomCoursEau)
     {
-        $this->neo4j->deleteCoursEau($name);
-        return redirect()->route('cours.index')->with('success', 'Cours d\'eau supprimé.');
+        $this->service->delete($nomCoursEau);
+
+        return redirect()
+            ->route('cours.index')
+            ->with('status', 'Cours d’eau supprimé avec succès.');
     }
 }

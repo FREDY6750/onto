@@ -4,7 +4,7 @@
 <div class="max-w-3xl mx-auto py-10 px-4">
     <div class="bg-white shadow-md rounded-xl overflow-hidden">
         <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-            <h2 class="text-xl font-bold text-gray-800">Modifier le cours d’eau</h2>
+            <h2 class="text-xl font-bold text-gray-800">Modifier le Fleuve</h2>
             <a href="{{ route('cours.index') }}" class="text-sm text-blue-600 hover:underline flex items-center gap-1">
                 <i data-lucide="arrow-left" class="w-4 h-4"></i> Retour
             </a>
@@ -35,7 +35,7 @@
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700">Régime hydrologique</label>
-                    <input type="text" name="regimehydrologique" value="{{ $cours['regimehydrologique'] ?? '' }}"
+                    <input type="text" name="typeCoursEau" value="{{ $cours['typeCoursEau'] ?? '' }}"
                         required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500">
                 </div>
 

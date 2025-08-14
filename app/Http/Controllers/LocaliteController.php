@@ -2,94 +2,99 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\Neo4jService;
 use Illuminate\Http\Request;
-
+use App\Services\LocaliteGeographiqueService;
 
 class LocaliteController extends Controller
 {
-    protected $neo4j;
+    protected $service;
 
-    public function __construct(Neo4jService $neo4j)
+    public function __construct(LocaliteGeographiqueService $service)
     {
-        $this->neo4j = $neo4j;
+        $this->service = $service;
     }
 
-   public function index()
-{
-    $results = $this->neo4j->getAllLocalitesGroupedByRegion();
+    /**
+     * Liste des localités (on passe un tableau de strings à la vue).
+     */
+    public function index(Request $request)
+    {
+        // $rows est un array de CypherMap (car toArray() dans le service)
+        $rows = $this->service->all();
 
-    $grouped = [];
+        // On extrait proprement nomLocGeo -> tableau de strings
+        $localites = array_map(function ($row) {
+            // $row est un CypherMap; on récupère le noeud 'l'
+            $node = $row->get('l'); // Laudis\Neo4j\Types\Node
+            return $node->getProperty('nomLocGeo'); // string
+        }, $rows);
 
-    foreach ($results as $record) {
-        $region = $record->get('region');
-        $ville = $record->get('ville');
-        if ($region && $ville) {
-            $grouped[$region][] = $ville;
+        // Filtre de recherche (sur un simple tableau de strings)
+        if ($request->filled('q')) {
+            $q = mb_strtolower($request->q);
+            $localites = array_values(array_filter($localites, function ($nomLocGeo) use ($q) {
+                return str_contains(mb_strtolower($nomLocGeo), $q);
+            }));
         }
+
+        return view('localites.index', compact('localites'));
     }
 
-    return view('localites.index', compact('grouped'));
-}
+    public function create()
+    {
+        return view('localites.create');
+    }
 
+    public function store(Request $request)
+    {
+        $request->validate([
+            'nomLocGeo' => 'required|string|max:255',
+        ]);
 
+        $this->service->create($request->only('nomLocGeo'));
 
- public function create()
-{
-    $query = "MATCH (r:LocaliteGeographique) WHERE r.nomLocGeo IS NOT NULL RETURN r";
-    $regions = $this->neo4j->getClient()->run($query)->toArray();
+        return redirect()->route('localites.index')
+            ->with('success', 'Localité créée avec succès.');
+    }
 
-    return view('localites.create', compact('regions'));
-}
+    public function edit($nomLocGeo)
+    {
+        // Attention: $nomLocGeo peut être encodé dans l’URL (espaces, etc.)
+        $nomLocGeo = urldecode($nomLocGeo);
 
-public function store(Request $request)
-{
-    $validated = $request->validate([
-        'nomVille' => 'required|string',
-        'nomLocGeo' => 'required|string',
-    ]);
+        $localite = $this->service->find($nomLocGeo);
+        if (!$localite) {
+            return redirect()->route('localites.index')->with('error', 'Localité introuvable.');
+        }
 
-    $this->neo4j->createVille($validated);
+        $nomLocGeo = $localite->get('l')->getProperty('nomLocGeo');
 
-    return redirect()->route('localites.index')->with('success', 'Ville ajoutée !');
-}
+        return view('localites.edit', [
+            'localite' => ['nomLocGeo' => $nomLocGeo],
+        ]);
+    }
 
-public function edit($nom)
-{
-    $record = $this->neo4j->findVille($nom);
-    $villeNode = $record->get('v');
-    $regionNode = $record->get('r');
+    public function update(Request $request, $nomLocGeo)
+    {
+        $nomLocGeo = urldecode($nomLocGeo);
 
-    $ville = $villeNode->getProperties();
-    $ville['nomLocGeo'] = $regionNode?->getProperties()['nomLocGeo'] ?? '';
+        $request->validate([
+            'nomLocGeo' => 'required|string|max:255',
+        ]);
 
-    $regionsQuery = <<<CYPHER
-MATCH (r:LocaliteGeographique) 
-WHERE r.nomLocGeo IS NOT NULL AND NOT EXISTS(r.nomVille) 
-RETURN r
-CYPHER;
+        $this->service->update($nomLocGeo, $request->only('nomLocGeo'));
 
-    $regions = $this->neo4j->getClient()->run($regionsQuery)->toArray();
+        return redirect()->route('localites.index')
+            ->with('success', 'Localité mise à jour avec succès.');
+    }
 
-    return view('localites.edit', compact('ville', 'regions'));
-}
+    public function destroy($nomLocGeo)
+    {
+        $nomLocGeo = urldecode($nomLocGeo);
 
-public function update(Request $request, $nomInitial)
-{
-    $validated = $request->validate([
-        'nomVille' => 'required|string',
-        'nomLocGeo' => 'required|string',
-    ]);
+        $this->service->delete($nomLocGeo);
 
-    $this->neo4j->updateVille($nomInitial, $validated);
-
-    return redirect()->route('localites.index')->with('success', 'Ville mise à jour avec succès.');
-}
-
-public function destroy($nom)
-{
-    $this->neo4j->deleteVille($nom);
-    return redirect()->route('localites.index')->with('success', 'Ville supprimée avec succès.');
-}
-
+        return redirect()->route('localites.index')
+            ->with('success', 'Localité supprimée avec succès.');
+    }
 }

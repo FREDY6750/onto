@@ -11,7 +11,7 @@ class LocaliteGeographiqueService
     public function __construct()
     {
         $this->client = ClientBuilder::create()
-            ->withDriver('default', 'neo4j://neo4j:Admin123@localhost:7687')
+            ->withDriver('default', 'neo4j://neo4j:Admin1234@localhost:7687')
             ->build();
     }
 

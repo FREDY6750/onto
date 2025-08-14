@@ -1,0 +1,1728 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32/"
+     xml:base="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32/"
+     xmlns:g32="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#aPourAffluent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#aPourAffluent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#estAffluentDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#aPourBassinVersant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#aPourBassinVersant">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#contient"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#contient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#contient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#estAffluentDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#estAffluentDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#estTraverseePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#estTraverseePar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#traverse"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#traverse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#traverse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#debitAffluent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#debitAffluent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#debitMoyenCoursEau -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#debitMoyenCoursEau">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#longueurCoursEau -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#longueurCoursEau">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomAffluent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomAffluent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomBassinVersant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomBassinVersant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomCoursEau -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomCoursEau">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomLocGeo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomLocGeo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomSource -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomSource">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomVersement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#nomVersement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#partSurfaceNationaleBassinVersant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#partSurfaceNationaleBassinVersant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#superficieBassinVersant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#superficieBassinVersant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#typeCoursEau -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#typeCoursEau">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Fleuve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Fleuve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#CoursEau"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBaoue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBaoue">
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveComoe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBeli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBeli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Béli</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBonsoaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBonsoaga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Bonsoaga</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBougouriba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBougouriba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveMouhoun"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">27.8</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Bougouriba</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDargol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDargol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Dargol</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDiamangou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDiamangou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Diamangou</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDoudodo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDoudodo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.5</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Doudodo</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDougoulamoumdi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDougoulamoumdi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Dougoulamoumdi</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentFaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentFaga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Faga</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentGorouol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentGorouol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Gorouol</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentGoudebo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentGoudebo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Goudébo</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentGrandBale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentGrandBale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveMouhoun"/>
+        <g32:nomAffluent>Affleuent Grand Balé ou Boromo</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentIringou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentIringou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveComoe"/>
+        <g32:nomAffluent>Affluent Iringou</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentKompienga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentKompienga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.5</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Kompienga</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentKou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentKou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveMouhoun"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.8</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Kou</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentKoulipele -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentKoulipele">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Koulipélé</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentLerabaOccidental -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentLerabaOccidental">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveComoe"/>
+        <g32:nomAffluent>Affluent Léraba Occidentale ou Léraba</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentMassili -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentMassili">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Massili</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNakambe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNakambe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:nomAffluent>Affluent Nakambé</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNazinon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNazinon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:nomAffluent>Affluent Nazinon</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNgorlaka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNgorlaka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>N&apos;Gorlaka</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNouhao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNouhao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Nouhao</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNoumbiel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNoumbiel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveMouhoun"/>
+        <g32:nomAffluent>Affluent Noumbiel</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentPlandi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentPlandi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveMouhoun"/>
+        <g32:nomAffluent>Affluent Plandi</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSangoue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSangoue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Sangoué</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSeledogo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSeledogo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Sélédogo</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSesse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSesse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Sessé</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSingou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSingou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Singou</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSirba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSirba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Sirba</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSissili -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSissili">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.5</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Sissili</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSourou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSourou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveMouhoun"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">90.0</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Sourou</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentTapoa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentTapoa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Tapoa</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentTcherbo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentTcherbo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:debitAffluent rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</g32:debitAffluent>
+        <g32:nomAffluent>Affluent Tcherbo</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentTesse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentTesse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:nomAffluent>Tessé ou Longo</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentVounHou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentVounHou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveMouhoun"/>
+        <g32:nomAffluent>Affluent Voun Hou</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentYanon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentYanon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Affluent"/>
+        <g32:estAffluentDe rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveComoe"/>
+        <g32:nomAffluent>Affluent Yanon</g32:nomAffluent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalComoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalComoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveComoe"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereHauteComoe"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereIringou"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereLerabaOccidental"/>
+        <g32:nomBassinVersant>Bassin versant de la Comoé</g32:nomBassinVersant>
+        <g32:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.42</g32:partSurfaceNationaleBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">17590.0</g32:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalMouhoun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalMouhoun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveMouhoun"/>
+        <g32:nomBassinVersant>Bassin versant du Mouhoun</g32:nomBassinVersant>
+        <g32:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">33.22</g32:partSurfaceNationaleBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">91.036</g32:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNakambe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNakambe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDoudodo"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDougoulamoumdi"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKompienga"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKoulipele"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereMassili"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNakambe"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNazinon"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNouhao"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSingou"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSissili"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTcherbo"/>
+        <g32:nomBassinVersant>Bassin versant national du Nakambé</g32:nomBassinVersant>
+        <g32:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">29.9</g32:partSurfaceNationaleBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">172965.0</g32:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNational"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereBeli"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereBonsoaga"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDargol"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDiamangou"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereFaga"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereGorouol"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereGoudebo"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSangoue"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSeledogo"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSesse"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSirba"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTapoa"/>
+        <g32:contient rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTesse"/>
+        <g32:nomBassinVersant>Bassin Versant Du Niger</g32:nomBassinVersant>
+        <g32:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30.45</g32:partSurfaceNationaleBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">83442.0</g32:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveComoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveComoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Fleuve"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBaoue"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentIringou"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentLerabaOccidental"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentYanon"/>
+        <g32:nomCoursEau>Fleuve Comoé</g32:nomCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveMouhoun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveMouhoun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Fleuve"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBougouriba"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentGrandBale"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentKou"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNoumbiel"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentPlandi"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSourou"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentVounHou"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalMouhoun"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionBoucleMouhoun"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCascades"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreOuest"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionHautsBassins"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionNord"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSudOuest"/>
+        <g32:nomCoursEau>Fleuve Mouhoun</g32:nomCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNakambe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Fleuve"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDoudodo"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDougoulamoumdi"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentKompienga"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentKoulipele"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentMassili"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNakambe"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNouhao"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSingou"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSissili"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentTcherbo"/>
+        <g32:debitMoyenCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</g32:debitMoyenCoursEau>
+        <g32:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">370.0</g32:longueurCoursEau>
+        <g32:nomCoursEau>Fleuve Nakambé</g32:nomCoursEau>
+        <g32:nomSource>Région du Plateau Central</g32:nomSource>
+        <g32:nomVersement>Fleuve Volta Blanc</g32:nomVersement>
+        <g32:typeCoursEau>Permanente</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#FleuveNiger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Fleuve"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBeli"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentBonsoaga"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDargol"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentDiamangou"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentFaga"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentGorouol"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentGoudebo"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentNgorlaka"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSangoue"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSeledogo"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSesse"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentSirba"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentTapoa"/>
+        <g32:aPourAffluent rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#AffluentTesse"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:debitMoyenCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6000.0</g32:debitMoyenCoursEau>
+        <g32:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4184.0</g32:longueurCoursEau>
+        <g32:nomCoursEau>Fleuve Niger</g32:nomCoursEau>
+        <g32:nomSource>Au pied des monts Lom (Guinée) à 800m d&apos;altitude</g32:nomSource>
+        <g32:nomVersement>Océan Atlantique (delta du Niger, golfe de Guinée)</g32:nomVersement>
+        <g32:typeCoursEau>Pérenne (écoulement permanent)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionBoucleMouhoun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionBoucleMouhoun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:nomLocGeo>Région de la Boucle du Mouhoun</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCascades -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCascades">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:nomLocGeo>Région des Cascades</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:nomLocGeo>Région du Centre</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreEst -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreEst">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDoudodo"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDougoulamoumdi"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKompienga"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKoulipele"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereMassili"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNouhao"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSirba"/>
+        <g32:nomLocGeo>Région du Centre-Est</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreNord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreNord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereFaga"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNakambe"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSirba"/>
+        <g32:nomLocGeo>Région du Centre-Nord</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreOuest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreOuest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSissili"/>
+        <g32:nomLocGeo>Région du Centre-Ouest</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreSud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreSud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNakambe"/>
+        <g32:nomLocGeo>Région du Centre-Sud</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionEst -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionEst">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereBonsoaga"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDiamangou"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereFaga"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNakambe"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSingou"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSirba"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTapoa"/>
+        <g32:nomLocGeo>Région de l&apos;Est</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionHautsBassins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionHautsBassins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNakambe"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSangoue"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSeledogo"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTesse"/>
+        <g32:nomLocGeo>Région des Hauts-Bassins</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionNord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionNord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:nomLocGeo>Région du Nord</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionPlateauCentral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionPlateauCentral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNakambe"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSirba"/>
+        <g32:nomLocGeo>Région du Plateau-Central</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSahel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSahel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereBeli"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDargol"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereFaga"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereGorouol"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereGoudebo"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSirba"/>
+        <g32:nomLocGeo>Région du Sahel</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSudOuest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSudOuest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#LocaliteGeographique"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNakambe"/>
+        <g32:nomLocGeo>Région du Sud-Ouest</g32:nomLocGeo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereBeli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereBeli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSahel"/>
+        <g32:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">140.0</g32:longueurCoursEau>
+        <g32:nomCoursEau>Béli</g32:nomCoursEau>
+        <g32:nomSource>Près de Fadar-Fadar (province de l&apos;Oudalan, Région du Sahel)</g32:nomSource>
+        <g32:nomVersement>Confluent avec le Fleuve Niger près d&apos;Ayorou (Niger)</g32:nomVersement>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereBonsoaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereBonsoaga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionEst"/>
+        <g32:debitMoyenCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</g32:debitMoyenCoursEau>
+        <g32:nomCoursEau>Bonsoaga</g32:nomCoursEau>
+        <g32:nomSource>Près de Fouanmbwanou, à une alttitude d&apos;environ 246 m</g32:nomSource>
+        <g32:nomVersement>Confluent avec la Rivière Goroubi qui elle meme se jette dans le Fleuve Niger</g32:nomVersement>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereBougouriba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereBougouriba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDargol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDargol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSahel"/>
+        <g32:nomCoursEau>Dargol</g32:nomCoursEau>
+        <g32:nomSource>Plateau du Liptako, à une altitude d&apos;environ 600m</g32:nomSource>
+        <g32:nomVersement>Confluent avec le fleuve Niger près de Malanville (Niger)</g32:nomVersement>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDiamangou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDiamangou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionEst"/>
+        <g32:nomCoursEau>Diamangou</g32:nomCoursEau>
+        <g32:nomVersement>Confluent avec le Fleuve Niger</g32:nomVersement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDoudodo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDoudodo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSingou"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDougoulamoumdi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereDougoulamoumdi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNazinon"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTcherbo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereFaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereFaga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreNord"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionEst"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSahel"/>
+        <g32:nomCoursEau>Sirba</g32:nomCoursEau>
+        <g32:nomVersement>Confluent avec la Rivière Sirba qui elle meme se jette dans le Fleuve Niger</g32:nomVersement>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereGorouol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereGorouol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSahel"/>
+        <g32:debitMoyenCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</g32:debitMoyenCoursEau>
+        <g32:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">465.0</g32:longueurCoursEau>
+        <g32:nomCoursEau>Gorouol</g32:nomCoursEau>
+        <g32:nomSource>Dori, région du Sahel</g32:nomSource>
+        <g32:nomVersement>Confluent avec le Fleuve Niger au niveau de Fanfara ( à une soixantaine de kilomètres de Tillabéry)</g32:nomVersement>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereGoudebo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereGoudebo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSahel"/>
+        <g32:nomCoursEau>Goudebo</g32:nomCoursEau>
+        <g32:nomVersement>Confluent avec la Rivière Gorouol qui elle meme se jette dans le Fleuve Niger</g32:nomVersement>
+        <g32:typeCoursEau>Plateau Nord de Dori, Région du Sahel</g32:typeCoursEau>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereGrandBale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereGrandBale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereHauteComoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereHauteComoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereIringou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereIringou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKompienga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKompienga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKoulipele -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKoulipele">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereLerabaOccidental -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereLerabaOccidental">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereMassili -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereMassili">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:estTraverseePar rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereKoulipele"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNGorlaka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNGorlaka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNakambe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNakambe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNazinon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNazinon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNouhao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNouhao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNoumbiel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereNoumbiel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RivierePlandi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RivierePlandi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSangoue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSangoue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionHautsBassins"/>
+        <g32:nomCoursEau>Sangoué</g32:nomCoursEau>
+        <g32:typeCoursEau>Temporaire (écoulemen saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSeledogo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSeledogo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionHautsBassins"/>
+        <g32:nomCoursEau>Sélédogo</g32:nomCoursEau>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSesse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSesse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:nomCoursEau>Séssé</g32:nomCoursEau>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSingou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSingou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSirba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSirba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreEst"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionCentreNord"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionEst"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionPlateauCentral"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionSahel"/>
+        <g32:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">350.0</g32:longueurCoursEau>
+        <g32:nomCoursEau>Sirba</g32:nomCoursEau>
+        <g32:nomSource>Basses collines de la Région du Plateau-Central</g32:nomSource>
+        <g32:nomVersement>Fleuve Niger, entre les agglomérations de Gothèye et de Karma au Niger, à environ 50 Km en amont de Niamey</g32:nomVersement>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSissili -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSissili">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSourou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereSourou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTapoa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTapoa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionEst"/>
+        <g32:longueurCoursEau rdf:datatype="http://www.w3.org/2001/XMLSchema#float">260.0</g32:longueurCoursEau>
+        <g32:nomCoursEau>Tapoa</g32:nomCoursEau>
+        <g32:nomSource>Province de la Tapoa, Région de l&apos;Est</g32:nomSource>
+        <g32:nomVersement>Confluent avec le Fleuve Niger, près du département de Say au Niger</g32:nomVersement>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTcherbo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTcherbo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTesse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereTesse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+        <g32:aPourBassinVersant rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#BassinVersantNationalNiger"/>
+        <g32:traverse rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RegionHautsBassins"/>
+        <g32:nomCoursEau>Tessé</g32:nomCoursEau>
+        <g32:typeCoursEau>Temporaire (écoulement saisonnier)</g32:typeCoursEau>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereVounHou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereVounHou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereYanon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#RiviereYanon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#Riviere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalBanifing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalBanifing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational"/>
+        <g32:nomBassinVersant>Bassin Versant National Du Banifing</g32:nomBassinVersant>
+        <g32:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.98</g32:partSurfaceNationaleBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5441.0</g32:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalComoe_Leraba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalComoe_Leraba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalMouhounInferieur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalMouhounInferieur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational"/>
+        <g32:nomBassinVersant>Sous-Bassin Versant Mouhoun Inferieur</g32:nomBassinVersant>
+        <g32:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</g32:partSurfaceNationaleBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">54802.0</g32:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalMouhounSuperieur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalMouhounSuperieur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational"/>
+        <g32:nomBassinVersant>Sous-Bassin Versant Mouhoun Superieur</g32:nomBassinVersant>
+        <g32:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.66</g32:partSurfaceNationaleBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20978.0</g32:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalNakambe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalNakambe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalNazinon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalNazinon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalPendjari_Kompienga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalPendjari_Kompienga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalRDFN_CS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalRDFN_CS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational"/>
+        <g32:nomBassinVersant>Sous-Bassins sur rive droite du Fleuve Niger (coté septentrional)</g32:nomBassinVersant>
+        <g32:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.06</g32:partSurfaceNationaleBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24839.0</g32:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalRDFN_CSS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalRDFN_CSS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational"/>
+        <g32:nomBassinVersant>Sous-Bassins Versant sur rive droite du Fleuve Niger (coté soudano-sahélien)</g32:nomBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.4</g32:superficieBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">53162.0</g32:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalSourou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNationalSourou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantNational"/>
+        <g32:nomBassinVersant>Sous Bassin Versant Sourou</g32:nomBassinVersant>
+        <g32:partSurfaceNationaleBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.55</g32:partSurfaceNationaleBassinVersant>
+        <g32:superficieBassinVersant rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15225.0</g32:superficieBassinVersant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalBaoue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalBaoue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalBeli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalBeli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalBonsoaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalBonsoaga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalBoromo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalBoromo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalBougouriba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalBougouriba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalDargol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalDargol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalDiamangou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalDiamangou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalDoudodo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalDoudodo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalDougoulamoumdi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalDougoulamoumdi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalFaga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalFaga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalGorouol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalGorouol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalGoudebo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalGoudebo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalGrandBale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalGrandBale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalHauteComoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalHauteComoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalKodoun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalKodoun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalKompienga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalKompienga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalKou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalKou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalKoulipele -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalKoulipele">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalLeraba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalLeraba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalMassili -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalMassili">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalNGorlaka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalNGorlaka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalNakambe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalNakambe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalNazinon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalNazinon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalNouhao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalNouhao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalNoumbiel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalNoumbiel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalPlandi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalPlandi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSangoue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSangoue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSeledogo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSeledogo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSesse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSesse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSingou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSingou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSirba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSirba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSissili -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSissili">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSourou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalSourou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalTapoa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalTapoa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalTcherbo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalTcherbo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalTesse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalTesse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalVounHou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegionalVounHou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/ontologie/watercourse/g32#SousBassinVersantRegional"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

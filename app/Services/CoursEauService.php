@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services;
 
 use Laudis\Neo4j\ClientBuilder;
@@ -14,136 +15,100 @@ class CoursEauService
             ->build();
     }
 
+    /**
+     * Récupère tous les cours d’eau
+     */
     public function all()
     {
         $query = <<<CYPHER
 MATCH (c:CoursEau)
-OPTIONAL MATCH (c)-[:aPourBassinVersant]->(b:BassinVersant)
-OPTIONAL MATCH (c)-[:traverse]->(l:LocaliteGeographique)
-OPTIONAL MATCH (c)-[:aPourAffluent]->(a:Affluent)
-OPTIONAL MATCH (c)-[:seJetteDans]->(f:Fleuve)
-RETURN c AS cours, b AS bassin, l AS localite, a AS affluent, f AS fleuve
+RETURN c
+ORDER BY c.nomCoursEau
 CYPHER;
 
         return $this->client->run($query)->toArray();
     }
 
+    /**
+     * Crée un nouveau cours d’eau
+     */
     public function create(array $data)
     {
         $query = <<<CYPHER
-MERGE (c:CoursEau {
-    nomCoursEau: \$nom,
-    typeCoursEau: \$type,
-    longueurCoursEau: \$longueur,
-    debitMoyenCoursEau: \$debit,
-    nomSource: \$source,
-    regimehydrologique: \$regime
-})
-WITH c
-OPTIONAL MATCH (b:BassinVersant {nomBassinVersant: \$bassin})
-OPTIONAL MATCH (l:LocaliteGeographique {nomLocGeo: \$localite})
-OPTIONAL MATCH (a:Affluent {nomAffluent: \$affluent})
-OPTIONAL MATCH (f:Fleuve {nomFleuve: \$fleuve})
-FOREACH (_ IN CASE WHEN b IS NOT NULL THEN [1] ELSE [] END | MERGE (c)-[:aPourBassinVersant]->(b))
-FOREACH (_ IN CASE WHEN l IS NOT NULL THEN [1] ELSE [] END | MERGE (c)-[:traverse]->(l))
-FOREACH (_ IN CASE WHEN a IS NOT NULL THEN [1] ELSE [] END | MERGE (c)-[:aPourAffluent]->(a))
-FOREACH (_ IN CASE WHEN f IS NOT NULL THEN [1] ELSE [] END | MERGE (c)-[:seJetteDans]->(f))
+MERGE (c:CoursEau {nomCoursEau: \$nomCoursEau})
+SET c.typeCoursEau       = \$typeCoursEau,
+    c.longueurCoursEau   = \$longueurCoursEau,
+    c.debitMoyenCoursEau = \$debitMoyenCoursEau,
+    c.nomSource          = \$nomSource,
+    c.nomVersement       = \$nomVersement
 RETURN c
 CYPHER;
 
         $this->client->run($query, [
-            'nom' => $data['nomCoursEau'],
-            'type' => $data['typeCoursEau'] ?? '',
-            'longueur' => floatval($data['longueurCoursEau'] ?? 0),
-            'debit' => floatval($data['debitMoyenCoursEau'] ?? 0),
-            'source' => $data['nomSource'] ?? '',
-            'regime' => $data['regimehydrologique'] ?? '',
-            'bassin' => $data['bassin_id'] ?? null,
-            'localite' => $data['localite_id'] ?? null,
-            'affluent' => $data['affluent_id'] ?? null,
-            'fleuve' => $data['fleuve_id'] ?? null,
+            'nomCoursEau'        => $data['nomCoursEau'],
+            'typeCoursEau'       => $data['typeCoursEau'] ?? '',
+            'longueurCoursEau'   => floatval($data['longueurCoursEau'] ?? 0),
+            'debitMoyenCoursEau' => floatval($data['debitMoyenCoursEau'] ?? 0),
+            'nomSource'          => $data['nomSource'] ?? '',
+            'nomVersement'       => $data['nomVersement'] ?? ''
         ]);
     }
 
-    public function find($nom)
+    /**
+     * Trouve un cours d’eau par son nom
+     */
+    public function find($nomCoursEau)
     {
         $query = <<<CYPHER
-MATCH (c:CoursEau {nomCoursEau: \$nom})
-OPTIONAL MATCH (c)-[:aPourBassinVersant]->(b:BassinVersant)
-OPTIONAL MATCH (c)-[:traverse]->(l:LocaliteGeographique)
-OPTIONAL MATCH (c)-[:aPourAffluent]->(a:Affluent)
-OPTIONAL MATCH (c)-[:seJetteDans]->(f:Fleuve)
-RETURN c AS cours, b AS bassin, l AS localite, a AS affluent, f AS fleuve
+MATCH (c:CoursEau {nomCoursEau: \$nomCoursEau})
+RETURN c
 LIMIT 1
 CYPHER;
 
-        return $this->client->run($query, ['nom' => $nom])->first();
+        return $this->client->run($query, [
+            'nomCoursEau' => $nomCoursEau
+        ])->first();
     }
 
-    public function update($nom, array $data)
+    /**
+     * Met à jour un cours d’eau
+     */
+    public function update($nomCoursEau, array $data)
     {
         $query = <<<CYPHER
-MATCH (c:CoursEau {nomCoursEau: \$nom})
-SET c.nomCoursEau = \$newNom,
-    c.typeCoursEau = \$type,
-    c.longueurCoursEau = \$longueur,
-    c.debitMoyenCoursEau = \$debit,
-    c.nomSource = \$source,
-    c.regimehydrologique = \$regime
-WITH c
-OPTIONAL MATCH (c)-[r1:aPourBassinVersant]->()
-DELETE r1
-WITH c
-OPTIONAL MATCH (c)-[r2:traverse]->()
-DELETE r2
-WITH c
-OPTIONAL MATCH (c)-[r3:aPourAffluent]->()
-DELETE r3
-WITH c
-OPTIONAL MATCH (c)-[r4:seJetteDans]->()
-DELETE r4
-WITH c
-OPTIONAL MATCH (b:BassinVersant {nomBassinVersant: \$bassin})
-OPTIONAL MATCH (l:LocaliteGeographique {nomLocGeo: \$localite})
-OPTIONAL MATCH (a:Affluent {nomAffluent: \$affluent})
-OPTIONAL MATCH (f:Fleuve {nomFleuve: \$fleuve})
-FOREACH (_ IN CASE WHEN b IS NOT NULL THEN [1] ELSE [] END | MERGE (c)-[:aPourBassinVersant]->(b))
-FOREACH (_ IN CASE WHEN l IS NOT NULL THEN [1] ELSE [] END | MERGE (c)-[:traverse]->(l))
-FOREACH (_ IN CASE WHEN a IS NOT NULL THEN [1] ELSE [] END | MERGE (c)-[:aPourAffluent]->(a))
-FOREACH (_ IN CASE WHEN f IS NOT NULL THEN [1] ELSE [] END | MERGE (c)-[:seJetteDans]->(f))
+MATCH (c:CoursEau {nomCoursEau: \$nomCoursEau})
+SET c.nomCoursEau        = \$newNomCoursEau,
+    c.typeCoursEau       = \$typeCoursEau,
+    c.longueurCoursEau   = \$longueurCoursEau,
+    c.debitMoyenCoursEau = \$debitMoyenCoursEau,
+    c.nomSource          = \$nomSource,
+    c.nomVersement       = \$nomVersement
 RETURN c
 CYPHER;
 
         $this->client->run($query, [
-            'nom' => $nom,
-            'newNom' => $data['nomCoursEau'],
-            'type' => $data['typeCoursEau'] ?? '',
-            'longueur' => floatval($data['longueurCoursEau'] ?? 0),
-            'debit' => floatval($data['debitMoyenCoursEau'] ?? 0),
-            'source' => $data['nomSource'] ?? '',
-            'regime' => $data['regimehydrologique'] ?? '',
-            'bassin' => $data['bassin_id'] ?? null,
-            'localite' => $data['localite_id'] ?? null,
-            'affluent' => $data['affluent_id'] ?? null,
-            'fleuve' => $data['fleuve_id'] ?? null,
+            'nomCoursEau'        => $nomCoursEau,
+            'newNomCoursEau'     => $data['nomCoursEau'],
+            'typeCoursEau'       => $data['typeCoursEau'] ?? '',
+            'longueurCoursEau'   => floatval($data['longueurCoursEau'] ?? 0),
+            'debitMoyenCoursEau' => floatval($data['debitMoyenCoursEau'] ?? 0),
+            'nomSource'          => $data['nomSource'] ?? '',
+            'nomVersement'       => $data['nomVersement'] ?? ''
         ]);
     }
 
-    public function delete($nom)
+    /**
+     * Supprime un cours d’eau
+     */
+    public function delete($nomCoursEau)
     {
-        $this->client->run(
-            'MATCH (c:CoursEau {nomCoursEau: $nom}) DETACH DELETE c',
-            ['nom' => $nom]
-        );
-    }
+        $query = <<<CYPHER
+MATCH (c:CoursEau {nomCoursEau: \$nomCoursEau})
+DETACH DELETE c
+CYPHER;
 
-    public function getAllLocalites()
-    {
-        return $this->client->run("MATCH (l:LocaliteGeographique) RETURN l")->toArray();
-    }
-
-    public function getAllBassins()
-    {
-        return $this->client->run("MATCH (b:BassinVersant) RETURN b")->toArray();
+        $this->client->run($query, [
+            'nomCoursEau' => $nomCoursEau
+        ]);
     }
 }
